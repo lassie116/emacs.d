@@ -25,7 +25,7 @@
     (setq auto-mode-alist (cons '("\.lua$" . lua-mode) auto-mode-alist))
     (autoload 'lua-mode "lua-mode" "Lua editing mode." t))
 
-(lua-setting)
+;(lua-setting)
 
 (defun haskell-setting ()
   ;(load "haskell-site-file")
@@ -36,7 +36,7 @@
   ;(add-hook 'haskell-mode-hook 'turn-on-haskell-ghci))
 )
 
-(haskell-setting)
+;(haskell-setting)
 
 (defun slime-setting ()
   (setq inferior-lisp-program "/usr/bin/ccl64")
@@ -46,7 +46,7 @@
   (require 'slime)
   (slime-setup))
 
-(slime-setting)
+;(slime-setting)
 
 (defun auto-complete-setting ()
   (add-to-list 'load-path "/usr/share/emacs/site-lisp/auto-complete")
@@ -55,7 +55,7 @@
 	       "/usr/share/emacs/site-lisp/auto-complete/ac-dict")
   (ac-config-default))
 
-(auto-complete-setting)
+;(auto-complete-setting)
 
 ;; howm
 (defun howm-setting ()
@@ -64,38 +64,4 @@
   (setq howm-menu-lang 'ja)
   ;; タイトル色
   (set-face-foreground 'howm-mode-title-face "turquoise"))
-(howm-setting)
-
-;; my setting
-(line-number-mode 1)
-(column-number-mode 1)
-(iswitchb-mode 1)
-
-;; coding-setting
-(prefer-coding-system 'utf-8)
- 
-(setq visible-bell t)
-(global-font-lock-mode t)
-
-(custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- '(column-number-mode t)
- ;'(inferior-lisp-program "java -cp /opt/local/share/java/clojure/lib/clojure.jar clojure.main")
- ;'(inferior-lisp-program "clj -r")
- '(tool-bar-mode nil))
-
-(custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- )
-
-(put 'downcase-region 'disabled nil)
-
-(setq indent-tabs-mode nil)
-
-;; flymake-ruby
+;(howm-setting)

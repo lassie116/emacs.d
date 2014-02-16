@@ -6,7 +6,7 @@
     haskell-mode
     ruby-mode
     flymake-ruby
-    flymake-haskell
+    flymake-haskell-multi
     auto-complete
     ))
 

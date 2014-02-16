@@ -5,15 +5,14 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
- 
+
+(require 'init-loader)
+(setq init-loader-show-log-after-init nil)
+(init-loader-load "~/.emacs.d/inits")
+
 ;;; IME setting
- 
-;; key-map change
-(defun key-map-setting ()
-  (define-key global-map "\C-\\" 'undo)
-	;;(define-key global-map "\C-h" 'delete-backward-char)
-	(global-set-key "\C-h" 'delete-backward-char))
- 
+
+'( 
 (setq default-frame-alist
       (append (list '(foreground-color . "white")
      '(background-color . "black")
@@ -23,7 +22,7 @@
      '(width . 80)
      '(height . 70)
      )
-   default-frame-alist))
+   default-frame-alist)))
  
 (defun yasnippet-setting()
   ;; yasnippet
@@ -109,7 +108,6 @@
 
 (put 'downcase-region 'disabled nil)
 
-(key-map-setting)
 (setq indent-tabs-mode nil)
 
 ;; flymake-ruby

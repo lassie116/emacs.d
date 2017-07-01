@@ -8,6 +8,7 @@
     flymake-ruby
     flymake-haskell-multi
     auto-complete
+    yaml-mode
     ))
 
 (let ((not-installed (loop for x in installing-package-list
